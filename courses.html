@@ -1,0 +1,1957 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+    <!--- basic page needs
+           ================================================== -->
+    <meta charset="utf-8" />
+    <title>Pamukkale Üniversitesi Spor Merkezi</title>
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- mobile specific metas
+        ================================================== -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Cache Control
+        ================================================== -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- CSS
+        ================================================== -->
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/vendor.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .course-date {
+        }
+        /* placeholder, tüm tarihler span.course-date olarak işaretlenecek */
+        .gecmis-tarih {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+    </style>
+    <style media="screen" type="text/css">
+        .s-styles {
+            background: white;
+            padding-bottom: 5rem;
+        }
+
+
+        @media only screen and (min-width: 768px) {
+            .course-schedule-desktop {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            .accordion-container-mobile,
+            .price-cards-container-mobile {
+                display: none !important;
+                visibility: hidden !important;
+            }
+        }
+
+
+        @media only screen and (max-width: 767px) {
+            .course-schedule-desktop {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            .accordion-container-mobile,
+            .price-cards-container-mobile {
+                display: block !important;
+                visibility: visible !important;
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            .accordion-header-mobile {
+                background-color: #FFC107;
+                color: #000;
+                cursor: pointer;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 1.7rem;
+                font-weight: 700;
+                font-family: 'Dosis', sans-serif;
+                transition: background-color 0.4s ease;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                position: relative;
+                line-height: 1.4;
+                padding: 13px 17px 60px;
+            }
+
+                .accordion-header-mobile small {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    margin-top: 4px;
+                    /* Taşma için satır sonlarında kırılma */
+                    white-space: normal;
+                    word-wrap: break-word;
+                }
+
+                .accordion-header-mobile:hover,
+                .accordion-header-mobile.active {
+                    background-color: #fbc02d;
+                }
+
+                .accordion-header-mobile::after {
+                    content: '\002B';
+                    color: #000;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 2.2rem;
+                    transition: transform 0.3s ease;
+                }
+
+                .accordion-header-mobile.active::after {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+            .accordion-panel-mobile {
+                padding: 0 18px;
+                background-color: white;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                border: 1px solid #f0f0f0;
+                border-top: none;
+                margin-bottom: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+                .accordion-panel-mobile .panel-content {
+                    margin: 1.5rem 0;
+                    font-size: 1.5rem;
+                    line-height: 1.6;
+                    border-bottom: 1px solid #f5f5f5;
+                    padding-bottom: 1.5rem;
+                }
+
+                    .accordion-panel-mobile .panel-content:last-child {
+                        border-bottom: none;
+                        margin-bottom: 1.5rem;
+                        padding-bottom: 0;
+                    }
+
+                    .accordion-panel-mobile .panel-content strong {
+                        color: #333;
+                        font-weight: 700;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+
+            .accordion-container-mobile + h3 {
+                margin-top: 1.5rem;
+            }
+
+
+            .price-cards-container-mobile .price-card-mobile {
+                background: white;
+                border: 1px solid #e0e0e0;
+                border-left: 5px solid #FFC107;
+                padding: 15px 20px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+            }
+
+                .price-cards-container-mobile .price-card-mobile h4 {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    font-size: 1.6rem;
+                    color: #000;
+                    font-weight: 700;
+                }
+
+                .price-cards-container-mobile .price-card-mobile p {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin: 5px 0 0 0;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: #555;
+                    line-height: 1.5;
+                }
+
+                    .price-cards-container-mobile .price-card-mobile p span:first-child {
+                        flex: 1 1 auto;
+                        overflow-wrap: break-word;
+                        margin-right: 10px;
+                    }
+
+                    .price-cards-container-mobile .price-card-mobile p span.price-value {
+                        flex: 0 0 auto;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        color: #000;
+                    }
+
+                    .price-cards-container-mobile .price-card-mobile p.price {
+                        font-size: 2.2rem;
+                        font-weight: 700;
+                        color: #000;
+                        margin-top: 10px;
+                    }
+
+                .price-cards-container-mobile .price-card-mobile .sporcu-paket-detay {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+                    .price-cards-container-mobile .price-card-mobile .sporcu-paket-detay span {
+                        font-size: 1.6rem;
+                    }
+        }
+    </style>
+    <style>
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .started-label {
+            display: inline-block;
+            margin-left: 0.5em;
+            padding: 0.2em 0.4em;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+            background-color: #FFC107;
+            color: #000;
+            animation: fade 2s ease-in-out infinite;
+        }
+
+        .online-label {
+            display: inline-block;
+            margin-left: 0.5em;
+            padding: 0.2em 0.4em;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+            background-color: #28a745;
+            color: #fff;
+            animation: fade 2s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+            .online-label:hover {
+                opacity: 0.8;
+            }
+
+        s {
+            color: #6c757d;
+            text-decoration: line-through;
+            text-decoration-color: #6c757d;
+            text-decoration-thickness: 1px;
+        }
+    </style>
+    <!-- script
+        ================================================== -->
+    <script src="js/pace.min.js"></script>
+    <!-- favicons
+        ================================================== -->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- fonts
+        ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Metrophobic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+</head>
+<body id="top">
+    <!-- header
+        ================================================== -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img alt="Pamukkale Üniversitesi Spor Merkezi Logo" src="images/logo.png" />
+            </a>
+        </div> <!-- end header-logo -->
+        <nav class="header-nav">
+            <a class="header-nav__close" href="#0"><span>Kapat</span></a>
+            <div class="header-nav__content">
+                <h3>NASIL YARDIMCI<br /> OLABİLİRİZ?</h3>
+                <ul class="header-nav__list">
+                    <li><a href="https://spodemekurs.pau.edu.tr/">ONLINE KURS KAYIT</a></li>
+                    <li><a class="smoothscroll" href="#contact">İLETİŞİM</a></li>
+                    <li><a class="smoothscroll" href="#yuzme">YÜZME KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#tenis">TENİS KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#cimnastik">CİMNASTİK KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#karate">KARATE KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#basketbol">BASKETBOL KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#voleybol">VOLEYBOL KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#spinning">SPINNING KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#pilates">PİLATES &amp; YOGA KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#reformer">REFORMER KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#kickboks">KICK BOKS KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#yoga">YOGA KURSLARI</a></li>
+                    <li><a class="smoothscroll" href="#sporcupaketi"><mark><strong> YENİ </strong></mark> SPORCU PAKETİ</a></li>
+                    <li><a class="smoothscroll" href="#belgeler">KAYIT İÇİN GEREKLİ BELGELER</a></li>
+                    <li><a href="index.html">ANA SAYFAYA DÖN</a></li>
+                </ul>
+                <p>Bizi sosyal medya hesaplarımızdan takip edebilirsiniz.</p>
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="http://www.facebook.com/pauspormerkezi"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/pauspormerkezi"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/pauspormerkezi"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div> <!-- end header-nav__content -->
+        </nav> <!-- end header-nav -->
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
+    <!-- home
+        ================================================== -->
+    <section class="s-home target-section footerMiddle" id="home">
+        <div class="home-content">
+            <div class="row home-content__main">
+                <h1>
+                    Kurslarımız<br />
+                    BİR TIK Ötenizde! <img alt="Online Ödeme İkonu" height="80px" src="images/payment.png" width="80px" />
+                </h1>
+                <p>
+                    Kurs kayıtlarını artık sitemizden <a href="https://spodemekurs.pau.edu.tr" target="_blank"><mark> online </mark></a> yapabilirsiniz
+                </p>
+            </div> <!-- end home-content__main -->
+        </div> <!-- end home-content -->
+        <ul class="home-sidelinkscourse">
+            <li><a href="https://spodemekurs.pau.edu.tr/"><h8>ONLINE KAYIT VE ÖDEME</h8></a></li>
+            <li><a class="smoothscroll" href="#belgeler"><h8>KAYIT İÇİN GEREKLİ BELGELER</h8></a></li>
+            <li><a class="smoothscroll" href="#contact"><h8>İLETİŞİM</h8></a></li>
+        </ul>
+        <ul class="home-social">
+            <li class="home-social-title">Bizi Takip Edin</li>
+            <li>
+                <a href="http://www.facebook.com/pauspormerkezi">
+                    <i class="fab fa-facebook"></i>
+                    <span class="home-social-text">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/pauspormerkezi">
+                    <i class="fab fa-twitter"></i>
+                    <span class="home-social-text">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.instagram.com/pauspormerkezi">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="home-social-text">Instagram</span>
+                </a>
+            </li>
+        </ul> <!-- end home-social -->
+    </section> <!-- end s-home -->
+    <!-- yuzme
+        ================================================== -->
+    <section class="s-kimiz" id="yuzme">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>YÜZME KURSLARI</h1>
+                <h3><mark>ÇOCUK KURSLARI (6-14 YAŞ)</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br /> (KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 16.00-17.00<br /><i class="fa-solid fa-clock"></i> 17.30-18.30<br /><i class="fa-solid fa-clock"></i> 19.00-20.00<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 16.00-17.00<br /><i class="fa-solid fa-clock"></i> 17.30-18.30<br /><i class="fa-solid fa-clock"></i> 19.00-20.00<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 11.00-12.00<br /><i class="fa-solid fa-clock"></i> 12.30-13.30<br /><i class="fa-solid fa-clock"></i> 14.00-15.00<br /></td><td>3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 16.00-17.00, 17.30-18.30, 19.00-20.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 16.00-17.00, 17.30-18.30, 19.00-20.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 11.00-12.00, 12.30-13.30, 14.00-15.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- YETİŞKİN KURSLARI -->
+                <h3><mark>YETİŞKİN KURSLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>YENİ KAYIT</th>
+                                <th>DÖNEMLER <br /> (KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 20.15-21.15<br /></td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 12.00-13.00 (Kadın Grubu)<br /><i class="fa-solid fa-clock"></i> 20.15-21.15<br /></td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta-8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 15.30-16.30<br /></td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saat</strong>20.15-21.15</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta - 8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 12.00-13.00, 20.15-21.15</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta - 8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saat</strong>14.45-15.45</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- YÜZME KURS FİYATLARI -->
+                <h3><mark>YÜZME KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>2150 TL</td>
+                                <td>2600 TL</td>
+                                <td>3050 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">2150 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2600 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">3050 TL</p>
+                    </div>
+                </div>
+                <!-- YÜZME ÖZEL DERS FİYATLARI -->
+                <h3><mark>YÜZME ÖZEL DERS FİYATLARI (YAZ DÖNEMİNDE YÜZME ÖZEL DERS VERİLMEMEKTEDİR!)</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>KİŞİ SAYISI</th>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, <br />PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1 Kişi</td>
+                                <td>1000 TL</td>
+                                <td>1050 TL</td>
+                                <td>1200 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>2 Kişi</td>
+                                <td>-</td>
+                                <td>800 TL</td>
+                                <td>950 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>3 Kişi</td>
+                                <td>-</td>
+                                <td>700 TL</td>
+                                <td>800 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>4 Kişi</td>
+                                <td>-</td>
+                                <td>600 TL</td>
+                                <td>700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><i class="fa-solid fa-circle-info"></i>  Özel ders fiyatları 1 derslik kişi başı ücretidir.</small>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>1 Kişi</h4>
+                        <p><span>PAÜ Önlisans ve Lisans Öğrencileri</span><span class="price-value">1000 TL</span></p>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">1050 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">1200 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>2 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">800 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">950 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>3 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">700 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">800 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>4 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">600 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">700 TL</span></p>
+                    </div>
+                    <small style="display: block; margin-top: 1rem;"><i class="fa-solid fa-circle-info"></i> Özel ders fiyatları 1 derslik kişi başı ücretidir.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end yuzme -->
+    <!-- tenis
+        ================================================== -->
+    <section class="s-kimizz" id="tenis">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>TENİS KURSLARI</h1>
+                <!-- YETİŞKİN KURSLARI -->
+                <h3><mark>YETİŞKİN KURSLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br /> (KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 19.00-20.00 (BAŞLANGIÇ)<br /><i class="fa-solid fa-clock"></i> 20.00-21.00 (ORTA SEVİYE)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 19.00-20.00 (ORTA SEVİYE)<br /><i class="fa-solid fa-clock"></i> 20.00-21.00 (BAŞLANGIÇ)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 10.00-11.00 (BAŞLANGIÇ)<br /><i class="fa-solid fa-clock"></i> 11.00-12.00 (ORTA SEVİYE)<br /></td><td>3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 19.00-20.00, 20.00-21.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 19.00-20.00, 20.00-21.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 10.00-11.00, 11.00-12.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi</strong> 3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- ÇOCUK KURSLARI -->
+                <h3><mark>ÇOCUK KURSLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- SALI-PERŞEMBE -->
+                            <tr class="column">
+                                <td>
+                                    Salı-Perşembe <br />
+                                    <small>(4 Hafta-8 Ders)</small><br /><br />
+                                    <i class="fa-solid fa-clock"></i> 17.45-18.45 <small>(2010-2017)</small>
+                                </td>
+                                <td>-</td>
+                                <td>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</td>
+                                <td>2-30 EYLÜL<br />1-31 EKİM</td>
+                            </tr>
+                            <!-- ÇARŞAMBA-CUMA -->
+                            <tr class="column">
+                                <td>
+                                    Çarşamba-Cuma <br />
+                                    <small>(4 Hafta-8 Ders)</small><br /><br />
+                                    <i class="fa-solid fa-clock"></i> 17.45-18.45 <small>(2018-2020)</small>
+                                </td>
+                                <td>-</td>
+                                <td>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</td>
+                                <td>2-30 EYLÜL<br />1-31 EKİM</td>
+                            </tr>
+                            <!-- CUMARTESİ-PAZAR -->
+                            <tr class="column">
+                                <td>
+                                    Cumartesi-Pazar <br />
+                                    <small>(3 Hafta-8 Ders)</small><br /><br />
+                                    <i class="fa-solid fa-clock"></i> 12.30-13.30 <small>(2010-2017)</small><br />
+                                    <i class="fa-solid fa-clock"></i> 13.30-14.30 <small>(2018-2020)</small>
+                                </td>
+                                <td>-</td>
+                                <td>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</td>
+                                <td>2-30 EYLÜL<br />1-31 EKİM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 17.45-18.45</div>
+                        <div class="panel-content"><strong>Kayıt Tarihi</strong>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 2-30 EYLÜL<br />1-31 EKİM</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 17.45-18.45</div>
+                        <div class="panel-content"><strong>Kayıt Tarihi</strong>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 2-30 EYLÜL<br />1-31 EKİM</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(3 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler</strong> 12.30-13.30, 13.30-14.30</div>
+                        <div class="panel-content"><strong>Kayıt Tarihi</strong>Tüm Tenis Çocuk başlangıç gruplarımız için, her ayın 1'i ile 5'i arası kayıt yaptırıp başlayabilirsiniz.</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi)</strong> 2-30 EYLÜL<br />1-31 EKİM</div>
+                    </div>
+                </div>
+                <!-- TENİS KURS FİYATLARI -->
+                <h3><mark>TENİS KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>2150 TL</td>
+                                <td>2600 TL</td>
+                                <td>3050 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">2150 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2600 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">3050 TL</p>
+                    </div>
+                </div>
+                <!-- TENİS ÖZEL DERS FİYATLARI -->
+                <h3><mark>TENİS ÖZEL DERS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>KİŞİ SAYISI</th>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, <br />PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1 Kişi</td>
+                                <td>1000 TL</td>
+                                <td>1050 TL</td>
+                                <td>1200 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>2 Kişi</td>
+                                <td>-</td>
+                                <td>800 TL</td>
+                                <td>950 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>3 Kişi</td>
+                                <td>-</td>
+                                <td>700 TL</td>
+                                <td>800 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td>4 Kişi</td>
+                                <td>-</td>
+                                <td>600 TL</td>
+                                <td>700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small>
+                        <h5><i class="fa-solid fa-circle-info"></i> Tenis kurslarıyla ilgili önemli bilgilendirme:</h5>
+                        Kurslar toplam 8 derstir. Seanslar 60 dakikadır. Gruplar 4-8 kişilik ve 14 yaşından büyükler içindir. Gruplara en az dört kişi kaydolduğu takdirde dersler başlayacaktır. Hava durumunun belirsiz olduğu durumlarda dersin takibini yapmak kursiyerin sorumluluğundadır. Raket ve toplar tarafımızca temin edilir. Tenis grup derslerinin telafisi yapılamaz, ancak hava şartlarından dolayı ders iptal edilirse telafi dersi yapılır. Özel ders fiyatları 1 derslik kişi başı ücretidir.
+                    </small>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>1 Kişi</h4>
+                        <p><span>PAÜ Önlisans ve Lisans Öğrencileri</span><span class="price-value">1000 TL</span></p>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">1050 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">1200 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>2 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">800 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">950 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>3 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">700 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">800 TL</span></p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>4 Kişi</h4>
+                        <p><span>PAÜ Personeli ve Emeklileri, PAÜ Mezunu, <br />PAÜ Lisansüstü Öğrencileri, <br />Kamu Personeli ve Emeklileri</span><span class="price-value">600 TL</span></p>
+                        <p><span>Standart</span><span class="price-value">700 TL</span></p>
+                    </div>
+                    <small style="display: block; margin-top: 1rem;">
+                        <h5><i class="fa-solid fa-circle-info"></i> Tenis kurslarıyla ilgili önemli bilgilendirme:</h5>
+                        Kurslar toplam 8 derstir. Seanslar 60 dakikadır. Gruplar 4-8 kişilik ve 14 yaşından büyükler içindir. Gruplara en az dört kişi kaydolduğu takdirde dersler başlayacaktır. Hava durumunun belirsiz olduğu durumlarda dersin takibini yapmak kursiyerin sorumluluğundadır. Raket ve toplar tarafımızca temin edilir. Tenis grup derslerinin telafisi yapılamaz, ancak hava şartlarından dolayı ders iptal edilirse telafi dersi yapılır. Özel ders fiyatları 1 derslik kişi başı ücretidir.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end tenis -->
+    <!-- cimnastik
+        ================================================== -->
+    <section class="s-kimiz" id="cimnastik">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>CİMNASTİK KURSLARI</h1>
+                <!-- ÇOCUK KURSLARI -->
+                <h3><mark>ÇOCUK KURSLARI (4-13 YAŞ)</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 17.30-18.30 (2020-2022)<br /><i class="fa-solid fa-clock"></i> 18.30-19.30 (2014-2019)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 17.00-18.00 (2020-2022)<br /><i class="fa-solid fa-clock"></i> 18.00-19.00 (2020-2022)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 11.30-12.30 (2020-2022)<br /><i class="fa-solid fa-clock"></i> 12.30-13.30 (2020-2022)<br /><i class="fa-solid fa-clock"></i> 13.30-14.30 (2014-2019)<br /><i class="fa-solid fa-clock"></i> 14.30-15.30 (2020-2022)</td><td>3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler: 17.30-18.30 (2020-2022), 18.30-19.30 (2014-2019)</strong> </div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler: 17.00-18.00 (2020-2022), 18.00-19.00 (2020-2022)</strong> </div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler: 11.30-12.30 (2020-2022), 12.30-13.30 (2020-2022), 13.30-14.30 (2014-2019), 14.30-15.30 (2020-2022)</strong> </div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- CİMNASTİK KURS FİYATLARI -->
+                <h3><mark>CİMNASTİK KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end cimnastik -->
+    <!-- karate
+        ================================================== -->
+    <section class="s-kimizz" id="karate">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>KARATE KURSLARI</h1>
+                <!-- ÇOCUK KURSLARI -->
+                <h3><mark>ÇOCUK KURSLARI (6-14 YAŞ)</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 16.30-17.30 (2012-2016)<br /><i class="fa-solid fa-clock"></i> 17.30-18.30 (DEVAM EDEN)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 16.30-17.30, 17.30-18.30</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- KARATE KURS FİYATLARI -->
+                <h3><mark>KARATE KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2750 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2750 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end karate -->
+    <!-- basketbol
+        ================================================== -->
+    <section class="s-kimiz" id="basketbol">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>BASKETBOL KURSLARI</h1>
+                <!-- ÇOCUK KURSLARI -->
+                <h3><mark>ÇOCUK KURSLARI (7-15 YAŞ)</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta, 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 14.30-15.30 (2013-2019)<br /><i class="fa-solid fa-clock"></i> 15.30-16.30 (2008-2012)<br /><i class="fa-solid fa-clock"></i> 14.30-15.30 (2010-2016)<br /><i class="fa-solid fa-clock"></i> 15.30-16.30 (2004-2009)<br /></td><td>3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 14.30-15.30, 15.30-16.30</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- BASKETBOL KURS FİYATLARI -->
+                <h3><mark>BASKETBOL KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end basketbol -->
+    <!-- voleybol
+        ================================================== -->
+    <section class="s-kimizz" id="voleybol">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>VOLEYBOL KURSLARI</h1>
+                <!-- ÇOCUK KURSLARI -->
+                <h3><mark>ÇOCUK KURSLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- CUMARTESİ-PAZAR -->
+                            <tr class="column">
+                                <td>
+                                    Cumartesi-Pazar <br />
+                                    <small>(4 Hafta-8 Ders)</small><br /><br />
+                                    <i class="fa-solid fa-clock"></i>  12:00-13:00 <small>(2010-2018)</small>
+                                </td>
+                                <td>6-13 EYLÜL<br />11-18 EKİM<br />8-16 KASIM<br />6-14 ARALIK</td>
+                                <td>14-12 EYLÜL<br />20-22 EKİM<br />17-19 KASIM<br />15-17 ARALIK</td>
+                                <td>13-26 EYLÜL<br />23-24 EKİM<br />20-22 KASIM<br />18-19 ARALIK</td>
+                                <td>27 EYLÜL-19 EKİM<br />25 EKİM-16 KASIM<br />22 KASIM-14 ARALIK<br />20 ARALIK-11 OCAK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> </div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 6-13 EYLÜL<br />11-18 EKİM<br />8-16 KASIM<br />6-14 ARALIK</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 14-12 EYLÜL<br />20-22 EKİM<br />17-19 KASIM<br />15-17 ARALIK</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13-26 EYLÜL<br />23-24 EKİM<br />20-22 KASIM<br />18-19 ARALIK</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 27 EYLÜL-19 EKİM<br />25 EKİM-16 KASIM<br />22 KASIM-14 ARALIK<br />20 ARALIK-11 OCAK</div>
+                    </div>
+                </div>
+                <!-- VOLEYBOL KURS FİYATLARI -->
+                <h3><mark>VOLEYBOL KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end voleybol -->
+    <!-- spinning
+        ================================================== -->
+    <section class="s-kimiz" id="spinning">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>SPINNING KURSLARI</h1>
+                <!-- YETİŞKİN KURSLARI -->
+                <h3><mark>YETİŞKİN KURSLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 17.00-18.00<br /><i class="fa-solid fa-clock"></i> 18.00-19.00<br /><i class="fa-solid fa-clock"></i> 19.00-20.00<br /><i class="fa-solid fa-clock"></i> 20.00-21.00<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 17.00-18.00<br /><i class="fa-solid fa-clock"></i> 18.00-19.00<br /><i class="fa-solid fa-clock"></i> 19.00-20.00<br /><i class="fa-solid fa-clock"></i> 20.00-21.00<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 17.00-18.00, 18.00-19.00, 19.00-20.00, 20.00-21.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 17.00-18.00, 18.00-19.00, 19.00-20.00, 20.00-21.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- SPINNING KURS FİYATLARI -->
+                <h3><mark>SPINNING KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end spinning -->
+    <!-- pilates & yoga
+        ================================================== -->
+    <section class="s-kimizz" id="pilates">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>PİLATES &amp; YOGA KURSLARI</h1>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><br /><br /><i class="fa-solid fa-clock"></i> 12.00-13.00 (Pilates)<br /><i class="fa-solid fa-clock"></i> 17.30-18.30 (Pilates)<br /><i class="fa-solid fa-clock"></i> 18.30-19.30 (Yoga)<br /><i class="fa-solid fa-clock"></i> 19.30-20.30 (Yoga)<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 12.00-13.00, 17.30-18.30, 18.30-19.30, 19.30-20.30</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content">
+                            <strong>Saatler:</strong><br />
+                            17:30-18:30 (Yoga)
+                        </div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong><br />1-7 EYLÜL<br />6-12 EKİM<br />3-9 KASIM<br />1-7 ARALIK</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong><br />8-10 EYLÜL<br />13-15 EKİM<br />10-12 KASIM<br />8-10 ARALIK</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong><br />11-22 EYLÜL<br />16-20 EKİM<br />13-17 KASIM<br />11-15 ARALIK</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong><br />24 EYLÜL-17 EKİM<br />22 EKİM-14 KASIM<br />19 KASIM-12 ARALIK<br />17 ARALIK-9 OCAK</div>
+                    </div>
+                </div>
+                <!-- PİLATES & YOGA KURS FİYATLARI -->
+                <h3><mark>PİLATES &amp; YOGA KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end pilates -->
+    <!-- reformer
+        ================================================== -->
+    <section class="s-kimiz" id="reformer">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>REFORMER KURSLARI</h1>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 12.00-13.00<br /><i class="fa-solid fa-clock"></i> 15.30-16.30<br /><i class="fa-solid fa-clock"></i> 16.30-17.30<br /><i class="fa-solid fa-clock"></i> 17.30-18.30<br /><i class="fa-solid fa-clock"></i> 19.00-20.00<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Çarşamba-Cuma<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 12.00-13.00<br /><i class="fa-solid fa-clock"></i> 15.30-16.30<br /><i class="fa-solid fa-clock"></i> 16.30-17.30<br /><i class="fa-solid fa-clock"></i> 17.30-18.30<br /><i class="fa-solid fa-clock"></i> 18.40-19.40<br /><i class="fa-solid fa-clock"></i> 19.40-20.40<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</td></tr><tr class="column"><td>Cumartesi-Pazar<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 10.00-11.00<br /><i class="fa-solid fa-clock"></i> 11.30-12.30<br /><i class="fa-solid fa-clock"></i> 13.00-14.00<br /><i class="fa-solid fa-clock"></i> 14.30-15.30<br /></td><td>3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</td><td>12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</td><td>15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</td><td>24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 12.00-13.00, 15.30-16.30, 16.30-17.30, 17.30-18.30, 19.00-20.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- ÇARŞAMBA-CUMA MOBILE -->
+                    <button class="accordion-header-mobile">Çarşamba-Cuma<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 12.00-13.00, 15.30-16.30, 16.30-17.30, 17.30-18.30, 18.40-19.40, 19.40-20.40</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 21 OCAK - 13 ŞUBAT<br />18 ŞUBAT - 13 MART<br />25 MART - 17 NİSAN<br />22 NİSAN - 15 MAYIS<br />20 MAYIS - 19 HAZİRAN</div>
+                    </div>
+                    <!-- CUMARTESİ-PAZAR MOBILE -->
+                    <button class="accordion-header-mobile">Cumartesi-Pazar<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 10.00-11.00, 11.30-12.30, 13.00-14.00, 14.30-15.30</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 3-11 OCAK<br />7-15 ŞUBAT<br />7-15 MART<br />11-19 NİSAN<br />9-17 MAYIS<br />13-21 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 12-14 OCAK<br />16-18 ŞUBAT<br />16-18 MART<br />20-22 NİSAN<br />18-20 MAYIS<br />22-23 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 15. OCAK<br />19. ŞUBAT<br />19. MART<br />24. NİSAN<br />21. MAYIS<br />25. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 24 OCAK - 15 ŞUBAT<br />21 ŞUBAT - 15 MART<br />28 MART - 19 NİSAN<br />25 NİSAN - 17 MAYIS<br />23 MAYIS - 21 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- REFORMER KURS FİYATLARI -->
+                <h3><mark>REFORMER KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>KİŞİ SAYISI</th>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td><strong>1 Kişi</strong></td>
+                                <td>2500 TL</td>
+                                <td>8100 TL</td>
+                                <td>8800 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td><strong>2 Kişi</strong></td>
+                                <td>-</td>
+                                <td>5350 TL</td>
+                                <td>6000 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td><strong>3 Kişi</strong></td>
+                                <td>-</td>
+                                <td>4300 TL</td>
+                                <td>4900 TL</td>
+                            </tr>
+                            <tr class="column">
+                                <td><strong>4-5 Kişi</strong></td>
+                                <td>-</td>
+                                <td>2950 TL</td>
+                                <td>3350 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>1 KİŞİ</h4>
+                        <div style="margin-bottom: 10px;">
+                            <strong>PAÜ Öğrencisi:</strong> 2500 TL<br />
+                            <strong>PAÜ Personeli/Kamu:</strong> 8100 TL<br />
+                            <strong>Standart:</strong> 8800 TL
+                        </div>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>2 KİŞİ</h4>
+                        <div style="margin-bottom: 10px;">
+                            <strong>PAÜ Personeli/Kamu:</strong> 5350 TL<br />
+                            <strong>Standart:</strong> 6000 TL
+                        </div>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>3 KİŞİ</h4>
+                        <div style="margin-bottom: 10px;">
+                            <strong>PAÜ Personeli/Kamu:</strong> 4300 TL<br />
+                            <strong>Standart:</strong> 4900 TL
+                        </div>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>4-5 KİŞİ</h4>
+                        <div style="margin-bottom: 10px;">
+                            <strong>PAÜ Personeli/Kamu:</strong> 2950 TL<br />
+                            <strong>Standart:</strong> 3350 TL
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end reformer -->
+    <!-- kickboks
+        ================================================== -->
+    <section class="s-kimizz" id="kickboks">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>KICK BOKS KURSLARI</h1>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GÜN VE SAATLER</th>
+                                <th>SON DÖNEM KURSLARIMIZA <br />GELENLER İÇİN KAYIT TARİHİ</th>
+                                <th>PAÜ PERSONELİ İÇİN KAYIT TARİHİ</th>
+                                <th>YENİ KAYIT İÇİN KAYIT TARİHİ</th>
+                                <th>DÖNEMLER <br />(KURSUN BAŞLAMA TARİHİ)</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr class="column"><td>Salı-Perşembe<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 18.00-19.00 ÇOCUK<br /><i class="fa-solid fa-clock"></i> 19.00-20.00 YETİŞKİN<br /><i class="fa-solid fa-clock"></i> 20.00-21.00 YETİŞKİN<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</td></tr><tr class="column"><td>Pazartesi-Çarşamba<br /><small><small>(4 Hafta - 8 Ders)</small></small><br /><br /><i class="fa-solid fa-clock"></i> 18.00-19.00 ÇOCUK<br /><i class="fa-solid fa-clock"></i> 19.00-20.00 YETİŞKİN<br /></td><td>2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</td><td>8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</td><td>13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</td><td>19 OCAK - 11 ŞUBAT<br />16 ŞUBAT - 11 MART<br />23 MART - 15 NİSAN<br />21 NİSAN - 13 MAYIS<br />18 MAYIS - 17 HAZİRAN</td></tr></tbody>
+                    </table>
+                </div>
+                <!-- MOBILE ACCORDION -->
+                <div class="accordion-container-mobile">
+                    <!-- SALI-PERŞEMBE MOBILE -->
+                    <button class="accordion-header-mobile">Salı-Perşembe<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 18.00-19.00, 19.00-20.00, 20.00-21.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 20 OCAK - 12 ŞUBAT<br />17 ŞUBAT - 12 MART<br />24 MART - 16 NİSAN<br />21 NİSAN - 14 MAYIS<br />19 MAYIS - 18 HAZİRAN</div>
+                    </div>
+                    <!-- PAZARTESİ-ÇARŞAMBA MOBILE -->
+                    <button class="accordion-header-mobile">Pazartesi-Çarşamba<small>(4 Hafta-8 Ders)</small></button>
+                    <div class="accordion-panel-mobile">
+                        <div class="panel-content"><strong>Saatler:</strong> 18.00-19.00, 19.00-20.00</div>
+                        <div class="panel-content"><strong>Son Dönem Kurslarımıza Gelenler için Kayıt Tarihi:</strong> 2-7 OCAK<br />2-8 ŞUBAT<br />2-8 MART<br />6-12 NİSAN<br />4-10 MAYIS<br />8-14 HAZİRAN</div>
+                        <div class="panel-content"><strong>PAÜ Personeli için Kayıt Tarihi:</strong> 8-12 OCAK<br />9-11 ŞUBAT<br />9-11 MART<br />13-15 NİSAN<br />11-13 MAYIS<br />15-17 HAZİRAN</div>
+                        <div class="panel-content"><strong>Yeni Kayıt için Kayıt Tarihi:</strong> 13. OCAK<br />12. ŞUBAT<br />12. MART<br />16. NİSAN<br />14. MAYIS<br />18. HAZİRAN</div>
+                        <div class="panel-content"><strong>Dönemler (Kursun Başlama Tarihi):</strong> 19 OCAK - 11 ŞUBAT<br />16 ŞUBAT - 11 MART<br />23 MART - 15 NİSAN<br />21 NİSAN - 13 MAYIS<br />18 MAYIS - 17 HAZİRAN</div>
+                    </div>
+                </div>
+                <!-- KICK BOKS KURS FİYATLARI -->
+                <h3><mark>KICK BOKS KURS FİYATLARI</mark></h3>
+                <!-- DESKTOP TABLE -->
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</th>
+                                <th>PAÜ PERSONELİ ve EMEKLİLERİ, <br />PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, <br />KAMU PERSONELİ ve EMEKLİLERİ</th>
+                                <th>STANDART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>1750 TL</td>
+                                <td>2200 TL</td>
+                                <td>2700 TL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- MOBILE PRICE CARDS -->
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile">
+                        <h4>PAÜ ÖN LİSANS ve LİSANS ÖĞRENCİLERİ</h4>
+                        <p class="price">1750 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>PAÜ PERSONELİ ve EMEKLİLERİ, PAÜ MEZUNU, PAÜ LİSANSÜSTÜ ÖĞRENCİLERİ, KAMU PERSONELİ ve EMEKLİLERİ</h4>
+                        <p class="price">2200 TL</p>
+                    </div>
+                    <div class="price-card-mobile">
+                        <h4>STANDART</h4>
+                        <p class="price">2700 TL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end kickboks -->
+    <!-- sporcupaketi
+        ================================================== -->
+    <section class="s-kimiz" id="sporcupaketi">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <h1>SPORCU PAKETİ</h1>
+                <div class="course-schedule-desktop">
+                    <table>
+                        <thead><tr><th>ANTRENMAN SAYISI</th><th>3 AYLIK HAVUZ</th><th>+</th><th>3 AYLIK GENEL FITNESS</th></tr></thead>
+                        <tbody>
+                            <tr class="column">
+                                <td>3<br />4<br />5<br />6<br />7<br />8<br /></td>
+                                <td>6750<br />7000<br />7250<br />7500<br />7750<br />8000<br /></td>
+                                <td>+<br />+<br />+<br />+<br />+<br />+<br /></td>
+                                <td>2150<br />2150<br />2150<br />2150<br />2150<br />2150<br /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><h5><i class="fa-solid fa-circle-info"></i> Sporcu paketleriyle ilgili önemli bilgilendirme:</h5> Bu pakete dahil olabilmek için sporcunun lisansının, antrenörün lisansının ve akreditasyonunun olması şarttır. Bu paket en az haftalık 3 antrenman şeklinde alınabilir. Sporcu, havuz ve genel fitness salonunu yalnızca antrenör eşliğinde kullanabilir.</small>
+                </div>
+                <div class="price-cards-container-mobile">
+                    <div class="price-card-mobile"><h4>3 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>6750 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <div class="price-card-mobile"><h4>4 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>7000 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <div class="price-card-mobile"><h4>5 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>7250 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <div class="price-card-mobile"><h4>6 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>7500 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <div class="price-card-mobile"><h4>7 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>7750 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <div class="price-card-mobile"><h4>8 Antrenman</h4><div class="sporcu-paket-detay"><span>3 Aylık Havuz:</span> <strong>8000 TL</strong></div><div class="sporcu-paket-detay"><span>3 Aylık Genel Fitness:</span> <strong>2150 TL</strong></div></div>
+                    <small style="display: block; margin-top: 1rem;"><h5><i class="fa-solid fa-circle-info"></i> Sporcu paketleriyle ilgili önemli bilgilendirme:</h5> Bu pakete dahil olabilmek için sporcunun lisansının, antrenörün lisansının ve akreditasyonunun olması şarttır. Bu paket en az haftalık 3 antrenman şeklinde alınabilir. Sporcu, havuz ve genel fitness salonunu yalnızca antrenör eşliğinde kullanabilir.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end sporcupaketi -->
+    <!-- belgeler
+        ================================================== -->
+    <section class="s-kimizz" id="belgeler">
+        <div class="row add-bottom">
+            <div class="col-twelve">
+                <div>
+                    <h2>KAYIT İÇİN GEREKLİ BELGELER</h2>
+                    Nüfus cüzdanı fotokopisi (Üyelerimizin getirmesine gerek yoktur).
+                    <br />
+                    Kurs ücreti ödendi makbuzu (Spor Merkezi içinde bulunan vezneye kredi kartıyla ya da nakit olarak ödenebilir.)
+                    <br />
+                    İndirimlerden faydalanacak olan yıllık kullanıcılar için PAÜ Spor Merkezi kullanıcı kartı fotokopisi, yıllık kullanıcı olmayan personel ve öğrenci için üniversite kimlik fotokopisi.
+                    <br />
+                    PAÜ mezunları ve emeklileri için mezuniyet belgesi veya emeklilik belgesi.
+                    <br />
+                    Kamu personeli için kimlik kartı ve kamu personeli olduğunu bildirir görev belgesi.
+                    <br />
+                    <small>Bankaya yatırılmış ücretler kurs kaydınızın yapıldığı anlamını taşımamaktadır. Kurs Birimi'nde işleminiz alınmadan kaydınız tamamlanmış sayılmamaktadır.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end belgeler -->
+    <!-- contact
+        ================================================== -->
+    <section class="s-contact" id="contact">
+        <div class="row section-header">
+            <div class="col-full">
+                <h3 class="subhead subhead--light">İrtibatta Kalalım</h3>
+                <h1 class="display-1 display-1--light">Kurslarla ilgili tüm sorularınıza hemen bizi arayarak yanıt alabilirsiniz.</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-full contact-main">
+                <p><span class="contact-email">TELEFONUMUZ 0258 296 28 60</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-five tab-full contact-secondary">
+                <h3 class="subhead subhead--light">NEREDEYİZ?</h3>
+                <p class="contact-address">Pamukkale Üniversitesi<br />Kınıklı Yerleşkesi<br />Denizli</p>
+            </div>
+            <div class="col-five tab-full contact-works">
+                <h3 class="subhead subhead--light">KURS BİRİMİ ÇALIŞMA SAATLERİ</h3>
+                <p class="contact-works">Pazartesi 09.00-17.00<br />Salı, Çarşamba, Perşembe, Cuma 09.00-20.00<br />Cumartesi 10.00-16.00<br /><small>Pazar kapalı.</small></p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <span><iframe allowfullscreen="" aria-hidden="false" height="500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1115.5194789158847!2d29.094113355225314!3d37.7392601716714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c73ec2c5874b05%3A0x1053d2e3536a4c25!2sPamukkale%20%C3%9Cniversitesi%20%C5%9Eehit%20%C3%96mer%20Halisdemir%20Spor%20Bilimleri%20Ara%C5%9Ft%C4%B1rma%20ve%20Uygulama%20Merkezi!5e0!3m2!1str!2str!4v1608640220112!5m2!1str!2str" style="border:0;" tabindex="0" width="100%"></iframe></span>
+            </div>
+        </div>
+        <div class="cl-go-top">
+            <a class="smoothscroll" href="#top" title="Başa Dön"><i aria-hidden="true" class="icon-arrow-up"></i></a>
+        </div>
+    </section>
+    <!-- end s-contact -->
+    <!-- photoswipe background
+        ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption"><div class="pswp__caption__center"></div></div>
+            </div>
+        </div>
+    </div>
+    <!-- end photoSwipe background -->
+    <!-- preloader
+        ================================================== -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- Java Script
+        ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Türkçe aylar
+            const MONTH = {
+                'OCAK': 0, 'ŞUBAT': 1, 'MART': 2, 'NİSAN': 3, 'MAYIS': 4, 'HAZİRAN': 5,
+                'TEMMUZ': 6, 'AĞUSTOS': 7, 'EYLÜL': 8, 'EKİM': 9, 'KASIM': 10, 'ARALIK': 11
+            };
+            const TODAY = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+
+            const upTR = s => s.normalize('NFC').toLocaleUpperCase('tr-TR');
+            const mm = name => MONTH[upTR(name)] ?? -1;
+
+            // Yıl kaydırma: örn. Aralık'ta Ocak/Haziran gibi daha küçük aylar bir sonraki yıla aittir (2026 sayfası gibi)
+            function yearForMonthIndex(monthIndex) {
+                let y = TODAY.getFullYear();
+                const cur = TODAY.getMonth();
+                if (monthIndex < cur && (cur - monthIndex) >= 6) y += 1;
+                return y;
+            }
+
+            // SADECE ay adlarını hedefle → artık “HAFTA, DERS” vs eşleşmez
+            const RE_ONE_MONTH = /(\d{1,2})\s*-\s*(\d{1,2})\s+(OCAK|ŞUBAT|MART|NİSAN|MAYIS|HAZİRAN|TEMMUZ|AĞUSTOS|EYLÜL|EKİM|KASIM|ARALIK)/gi;
+            const RE_TWO_MONTHS = /(\d{1,2})\s+(OCAK|ŞUBAT|MART|NİSAN|MAYIS|HAZİRAN|TEMMUZ|AĞUSTOS|EYLÜL|EKİM|KASIM|ARALIK)\s*-\s*(\d{1,2})\s+(OCAK|ŞUBAT|MART|NİSAN|MAYIS|HAZİRAN|TEMMUZ|AĞUSTOS|EYLÜL|EKİM|KASIM|ARALIK)/gi;
+            const RE_SINGLE = /(^|[>\s])(\d{1,2})\s+(OCAK|ŞUBAT|MART|NİSAN|MAYIS|HAZİRAN|TEMMUZ|AĞUSTOS|EYLÜL|EKİM|KASIM|ARALIK)(?=($|[\s<]))/gi;
+
+            function endDateFromMatch(match, type) {
+                // Yıl kaydırmayı da hesaba kat
+                if (type === 1) {
+                    const mon = mm(match[3]);
+                    const y = yearForMonthIndex(mon);
+                    return new Date(y, mon, parseInt(match[2], 10));
+                }
+                if (type === 2) {
+                    const m1 = mm(match[2]), m2 = mm(match[4]);
+                    const baseY = yearForMonthIndex(m1);
+                    return new Date(baseY + (m2 < m1 ? 1 : 0), m2, parseInt(match[3], 10));
+                }
+                if (type === 3) {
+                    const mon = mm(match[3]);
+                    const y = yearForMonthIndex(mon);
+                    return new Date(y, mon, parseInt(match[2], 10));
+                }
+            }
+            if (type === 2) {
+                const m1 = mm(match[2]), m2 = mm(match[4]);
+                return new Date(y + (m2 < m1 ? 1 : 0), m2, parseInt(match[3], 10));
+            }
+            if (type === 3) {
+                return new Date(y, mm(match[3]), parseInt(match[2], 10));
+            }
+        }
+
+                function processNode(node) {
+                if (node.dataset.datesProcessed === '1') return;
+                let html = node.innerHTML;
+
+                html = html.replace(RE_ONE_MONTH, (f, d1, d2, mon) => {
+                    const end = endDateFromMatch([null, d1, d2, mon], 1);
+                    const cls = (end < TODAY) ? 'gecmis-tarih' : 'course-date';
+                    return `<span class="${cls}">${d1}-${d2} ${upTR(mon)}</span>`;
+                });
+
+                html = html.replace(RE_TWO_MONTHS, (f, d1, m1, d2, m2) => {
+                    const end = endDateFromMatch([null, d1, m1, d2, m2], 2);
+                    const cls = (end < TODAY) ? 'gecmis-tarih' : 'course-date';
+                    return `<span class="${cls}">${d1} ${upTR(m1)}-${d2} ${upTR(m2)}</span>`;
+                });
+
+                html = html.replace(RE_SINGLE, (f, lead, d, m) => {
+                    const end = endDateFromMatch([null, lead, d, m], 3);
+                    const cls = (end < TODAY) ? 'gecmis-tarih' : 'course-date';
+                    return `${lead}<span class="${cls}">${d} ${upTR(m)}</span>`;
+                });
+
+                node.innerHTML = html;
+                node.dataset.datesProcessed = '1';
+            }
+
+                document.querySelectorAll('.course-schedule-desktop td, .accordion-panel-mobile .panel-content')
+                .forEach(processNode);
+            });
+    </script>
+    <!-- AKORDİYON İÇİN JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordions = document.querySelectorAll('.accordion-header-mobile');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function () {
+                    // Close other open accordions within the same container
+                    const container = this.closest('.accordion-container-mobile');
+                    if (container) {
+                        container.querySelectorAll('.accordion-header-mobile').forEach(otherAccordion => {
+                            if (otherAccordion !== this) {
+                                otherAccordion.classList.remove('active');
+                                otherAccordion.nextElementSibling.style.maxHeight = null;
+                            }
+                        });
+                    }
+
+                    // Toggle the clicked accordion
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Bugünün sadece yıl/ay/gün bilgisi
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+            // Yıl kaydırma: örn. Aralık'ta Ocak/Haziran gibi daha küçük aylar bir sonraki yıla aittir (2026 sayfası gibi)
+            function yearForMonthIndex(monthIndex) {
+                let y = today.getFullYear();
+                const cur = today.getMonth();
+                if (monthIndex < cur && (cur - monthIndex) >= 6) y += 1;
+                return y;
+            }
+
+            const months = {
+                'OCAK': 0, 'ŞUBAT': 1, 'MART': 2, 'NİSAN': 3, 'MAYIS': 4, 'HAZİRAN': 5,
+                'TEMMUZ': 6, 'AĞUSTOS': 7, 'EYLÜL': 8, 'EKİM': 9, 'KASIM': 10, 'ARALIK': 11
+            };
+
+            function parseRange(text) {
+                let m = text.match(/^\s*(\d{1,2})\s*-\s*(\d{1,2})\s+([A-ZÇĞİÖŞÜ]+)\s*$/i);
+                if (m) {
+                    const d1 = +m[1], d2 = +m[2], mo = months[m[3].toUpperCase()];
+                    if (mo == null) return null;
+                    const y = yearForMonthIndex(mo);
+                    return { start: new Date(y, mo, d1), end: new Date(y, mo, d2) };
+                }
+                m = text.match(/^\s*(\d{1,2})\s+([A-ZÇĞİÖŞÜ]+)\s*-\s*(\d{1,2})\s+([A-ZÇĞİÖŞÜ]+)\s*$/i);
+                if (m) {
+                    const d1 = +m[1], mo1 = months[m[2].toUpperCase()],
+                        d2 = +m[3], mo2 = months[m[4].toUpperCase()];
+                    if (mo1 == null || mo2 == null) return null;
+                    const baseY = yearForMonthIndex(mo1);
+                    const endY = baseY + (mo2 < mo1 ? 1 : 0);
+                    return { start: new Date(baseY, mo1, d1), end: new Date(endY, mo2, d2) };
+                }
+                m = text.match(/^\s*(\d{1,2})\s+([A-ZÇĞİÖŞÜ]+)\s*$/i);
+                if (m) {
+                    const d = +m[1], mo = months[m[2].toUpperCase()];
+                    if (mo == null) return null;
+                    const y = yearForMonthIndex(mo);
+                    return { start: new Date(y, mo, d), end: new Date(y, mo, d) };
+                }
+                return null;
+            }
+
+            // ---- Masaüstü tablolar ----
+            document.querySelectorAll('table').forEach(table => {
+                const heads = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+                const sonDonemCol = heads.findIndex(h => /SON DÖNEM/i.test(h)) + 1;
+                const pauPersonelCol = heads.findIndex(h => /PAÜ PERSONELİ/i.test(h)) + 1;
+                const yeniKayitCol = heads.findIndex(h => /YENİ KAYIT/i.test(h)) + 1;
+                const donemlerCol = heads.findIndex(h => /DÖNEMLER/i.test(h)) + 1;
+
+                table.querySelectorAll('tbody tr').forEach(tr => {
+                    // SON DÖNEM & PAÜ PERSONELİ kolonları
+                    [sonDonemCol, pauPersonelCol].forEach(col => {
+                        if (col > 0) {
+                            const td = tr.querySelector(`td:nth-child(${col})`);
+                            if (!td) return;
+                            const parts = td.innerHTML.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+
+                            // Duplication guard
+                            if (td.querySelector('.started-label') || td.querySelector('.online-label')) return;
+
+                            td.innerHTML = parts.map(raw => {
+                                const txt = raw.replace(/<[^>]+>/g, '').trim();
+                                const r = parseRange(txt);
+                                if (r && today >= r.start && today <= r.end) {
+                                    return `${raw}
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="started-label">BAŞLADI</span></a>
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="online-label">ONLINE KAYIT</span></a>`;
+                                }
+                                return raw;
+                            }).join('<br>');
+                        }
+                    });
+
+                    // YENİ KAYIT kolonu (DÖNEMLER ile birlikte değerlendirme)
+                    if (yeniKayitCol > 0 && donemlerCol > 0) {
+                        const tdY = tr.querySelector(`td:nth-child(${yeniKayitCol})`);
+                        const tdD = tr.querySelector(`td:nth-child(${donemlerCol})`);
+                        if (tdY && tdD) {
+                            // Duplication guard
+                            if (tdY.querySelector('.started-label') || tdY.querySelector('.online-label')) return;
+
+                            const temizY = tdY.innerHTML
+                                .replace(/<a[^>]*>.*?<\/a>/gi, '')
+                                .replace(/<\/?s>/gi, '').trim();
+                            const temizD = tdD.innerHTML
+                                .replace(/<a[^>]*>.*?<\/a>/gi, '')
+                                .replace(/<\/?s>/gi, '').trim();
+
+                            const partsY = temizY.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+                            const partsD = temizD.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+
+                            const updated = partsY.map((raw, i) => {
+                                const tY = raw.replace(/<[^>]+>/g, '').trim();
+                                const tD = (partsD[i] || '').replace(/<[^>]+>/g, '').trim();
+                                const rY = parseRange(tY), rD = parseRange(tD);
+                                if (rY && today > rY.end) {
+                                    return `<s>${raw}</s>`;
+                                } else if (rY && rD && today >= rY.start && today < rD.start) {
+                                    return `${raw}
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="started-label">BAŞLADI</span></a>
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="online-label">ONLINE KAYIT</span></a>`;
+                                }
+                                return raw;
+                            });
+
+                            tdY.innerHTML = updated.join('<br>');
+                        }
+                    }
+
+                    // DÖNEMLER sütununun ilk tarihi geçmişse üstünü çiz
+                    if (donemlerCol > 0) {
+                        const td = tr.querySelector(`td:nth-child(${donemlerCol})`);
+                        if (td) {
+                            const p = td.innerHTML.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+                            if (p[0]) {
+                                const d0 = p[0].replace(/<[^>]+>/g, '').split('-')[0].trim();
+                                const r0 = parseRange(d0);
+                                if (r0 && today > r0.end) {
+                                    p[0] = `<s>${p[0]}</s>`;
+                                    td.innerHTML = p.join('<br>');
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            // ---- Mobil akordeon ----
+            document.querySelectorAll('.accordion-container-mobile .accordion-panel-mobile').forEach(panel => {
+                const pcs = Array.from(panel.querySelectorAll('.panel-content'));
+                let pnlY = null, pnlD = null, fallbackY = null;
+
+                pcs.forEach(pc => {
+                    const head = (pc.querySelector('strong')?.textContent || '').trim();
+
+                    if (/Dönemler/i.test(head)) pnlD = pc;
+
+                    // Öncelik: "Yeni Kayıt"
+                    if (/Yeni\s*Kayıt/i.test(head)) pnlY = pc;
+
+                    // Yedek: "Kayıt" ama "Son Dönem" ya da "PAÜ" içermeyen (örn. “Kayıt Tarihi”)
+                    if (!pnlY && /Kayıt/i.test(head) && !/Son Dönem/i.test(head) && !/PAÜ/i.test(head)) {
+                        fallbackY = pc;
+                    }
+                });
+
+                if (!pnlY) pnlY = fallbackY;
+                if (!pnlY || !pnlD) return;
+
+                // Duplication guard
+                if (pnlY.querySelector('.started-label') || pnlY.querySelector('.online-label')) return;
+
+                // İçerikleri başlıktan ayırıp temizle
+                const temizY = pnlY.innerHTML
+                    .replace(/^<strong>[\s\S]*?<\/strong>\s*:?/i, '')
+                    .replace(/<a[^>]*>.*?<\/a>/gi, '')
+                    .replace(/<\/?s>/gi, '').trim();
+                const temizD = pnlD.innerHTML
+                    .replace(/^<strong>[\s\S]*?<\/strong>\s*:?/i, '')
+                    .replace(/<a[^>]*>.*?<\/a>/gi, '')
+                    .replace(/<\/?s>/gi, '').trim();
+
+                const partsY = temizY.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+                const partsD = temizD.split(/<br\s*\/?>/gi).map(s => s.trim()).filter(Boolean);
+
+                // Yeni Kayıt satırlarını rozetle
+                const updatedY = partsY.map((raw, i) => {
+                    const tY = raw.replace(/<[^>]+>/g, '').trim();
+                    const tD = (partsD[i] || '').replace(/<[^>]+>/g, '').trim();
+                    const rY = parseRange(tY), rD = parseRange(tD);
+                    if (rY && today > rY.end) {
+                        return `<s>${raw}</s>`;
+                    } else if (rY && rD && today >= rY.start && today < rD.start) {
+                        return `${raw}
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="started-label">BAŞLADI</span></a>
+<a href="https://spodemekurs.pau.edu.tr" target="_blank"><span class="online-label">ONLINE KAYIT</span></a>`;
+                    }
+                    return raw;
+                });
+
+                pnlY.innerHTML =
+                    `<strong>${pnlY.querySelector('strong').textContent}</strong><br>` +
+                    updatedY.join('<br>');
+
+                // Dönemler ilk aralığın ilk tarihini geçmişse üstünü çiz
+                if (partsD[0]) {
+                    const firstDateText = partsD[0].replace(/<[^>]+>/g, '').split('-')[0].trim();
+                    const r0 = parseRange(firstDateText);
+                    if (r0 && today > r0.end) {
+                        partsD[0] = `<s>${partsD[0]}</s>`;
+                        pnlD.innerHTML =
+                            `<strong>${pnlD.querySelector('strong').textContent}</strong><br>` +
+                            partsD.join('<br>');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

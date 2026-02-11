@@ -1,0 +1,378 @@
+﻿/* ---------------------------------------------------
+   Mini Yardım: Bileşen Stil Dosyası (Barlow + Modern)
+   --------------------------------------------------- */
+
+/* Barlow yükle */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+/* Tema değişkenleri */
+:root {
+    --hc-primary: #cc147f; /* header + launcher */
+    --hc-text: #222;
+    --hc-border: #e3e3e3;
+    --hc-bg: #ffffff;
+    --hc-muted: #fafafa;
+    --hc-user-bg: #eaf3ff;
+    --hc-user-text: #0a3d91;
+    --hc-shadow: 0 16px 40px rgba(0,0,0,.28);
+    --hc-radius: 16px;
+}
+
+#help-chat, #help-launcher, #help-chat * {
+    font-family: 'Barlow', sans-serif !important;
+    box-sizing: border-box; /* taşmaları kontrol et */
+}
+
+/* —— Yardım Balonu —— */
+#help-launcher {
+    position: fixed;
+    left: 18px;
+    bottom: 18px; /* sol alt */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--hc-primary);
+    color: #fff;
+    font-size: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.22);
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+    #help-launcher:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0,0,0,.26);
+    }
+
+    #help-launcher:focus {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+    }
+
+/* —— Sohbet Kutusu —— */
+#help-chat {
+    position: fixed;
+    left: 18px;
+    bottom: 86px; /* balonun üstünde */
+    width: 340px;
+    max-width: 92vw;
+    height: 460px;
+    max-height: 80vh;
+    background: var(--hc-bg);
+    border-radius: var(--hc-radius);
+    box-shadow: var(--hc-shadow);
+    overflow: hidden;
+    z-index: 10000;
+    transform: translateY(16px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease, height .18s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+    #help-chat.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    #help-chat.mini {
+        height: 56px;
+    }
+
+    /* Header */
+    #help-chat .hc-header {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        background: var(--hc-primary);
+        color: #fff;
+        padding: 14px 16px; 
+        min-height: 64px; 
+        border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+    /* Logo + başlık */
+    #help-chat .hc-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+        #help-chat .hc-brand img {
+            width: 50px;
+            height: 50px;
+            padding: 3px;
+        }
+
+    #help-chat .hc-title {
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 1.4px;
+        line-height: 1.20;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #help-chat .hc-actions {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+        #help-chat .hc-actions button {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 0;
+        }
+
+            #help-chat .hc-actions button:hover {
+                background: rgba(255,255,255,.15);
+            }
+
+    #help-chat .hc-header .hc-min, #help-chat .hc-header .hc-close {
+        margin: 0;
+    }
+
+    /* Body */
+    #help-chat .hc-body {
+        padding: 14px;
+        background: #fff;
+        overflow-y: auto; /* sadece dikey kaydır */
+        overflow-x: hidden; /* yatay kaydırma yok */
+    }
+
+        #help-chat .hc-body * {
+            max-width: 100%;
+        }
+    /* güvenlik ağı */
+
+    /* Selamlama balonu */
+    #help-chat .msg {
+        max-width: 100%;
+        margin: 8px 0;
+        padding: 12px 14px;
+        border-radius: 14px;
+        line-height: 1.5;
+        font-size: 14px;
+        color: var(--hc-text);
+        box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    }
+
+        #help-chat .msg.bot {
+            background: #fff;
+            border: 1px solid #eee;
+        }
+
+        #help-chat .msg.user {
+            background: var(--hc-user-bg);
+            color: var(--hc-user-text);
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+/* Soru listesi */
+.hc-questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+}
+
+/* Soru butonu – çok satır + ok ikonu + sığma garantisi */
+.hc-qbtn {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    border: 1px solid var(--hc-border);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--hc-text);
+    padding: 7px 44px 12px 14px; /* sağda ok için boşluk */
+    font-size: 15px;
+    line-height: 1.35;
+    letter-spacing: .2px;
+    font-weight: 600;
+    text-transform: none; /* ‘uppercase’ istersen değiştir */
+    white-space: normal; /* çok satır */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    transition: background .2s ease, border-color .2s ease, transform .06s ease;
+}
+
+    .hc-qbtn:hover {
+        background: #f6f6f6;
+        border-color: #ccc;
+    }
+
+    .hc-qbtn:active {
+        transform: scale(.98);
+    }
+
+    /* Ok ikonu */
+    .hc-qbtn::after {
+        content: '▾';
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transition: transform .18s ease, opacity .18s ease;
+        opacity: .7;
+        pointer-events: none;
+        font-size: 16px;
+    }
+
+.hc-item.open .hc-qbtn {
+    background: #f8f8f8;
+    border-color: #d9d9d9;
+}
+
+    .hc-item.open .hc-qbtn::after {
+        transform: translateY(-50%) rotate(180deg);
+        opacity: 1;
+    }
+
+/* Accordion cevabı: kapalı/açık */
+.hc-ans {
+    display: grid;
+    grid-template-rows: 0fr; /* kapalı */
+    opacity: 0;
+    margin: 0;
+    transition: grid-template-rows .18s ease, opacity .18s ease, margin .18s ease;
+}
+
+    .hc-ans > .hc-ans-inner {
+        overflow: hidden;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        border-radius: 12px;
+        box-shadow: none;
+        font-size: 14.5px;
+        line-height: 1.55;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
+
+.hc-item.open .hc-ans {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin: 0 0 12px;
+}
+
+    .hc-item.open .hc-ans > .hc-ans-inner {
+        padding: 12px 14px;
+        border: 1px solid #eee;
+        background: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    }
+
+/* Mobil iyileştirme */
+@media (max-width:480px) {
+    #help-chat {
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+}
+/* İKON: hafif sağ–sol sallanma (idle) */
+#help-launcher svg,
+#help-launcher .material-icons,
+#help-launcher > span {
+    display: block;
+    transform-origin: 50% 50%;
+    transform-box: fill-box; /* SVG'lerde merkezden dönsün */
+    animation: chatWiggle 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes chatWiggle {
+    /* 0–86%: sakin durur, sonra kısa bir sallanma */
+    0%,86% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    89% {
+        transform: rotate(-10deg) translateX(-1px);
+    }
+
+    92% {
+        transform: rotate(8deg) translateX(1px);
+    }
+
+    94% {
+        transform: rotate(-6deg) translateX(-1px);
+    }
+
+    96% {
+        transform: rotate(4deg) translateX(1px);
+    }
+
+    98% {
+        transform: rotate(-2deg) translateX(0);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+/* Hover'da anında kısa bir wiggle tetikle (isteğe bağlı) */
+#help-launcher:hover svg,
+#help-launcher:hover .material-icons,
+#help-launcher:hover > span {
+    animation: chatWiggleQuick .75s ease-in-out 1;
+}
+
+@keyframes chatWiggleQuick {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(12deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Hareketi azalt tercihinde kapat */
+@media (prefers-reduced-motion: reduce) {
+    #help-launcher svg,
+    #help-launcher .material-icons,
+    #help-launcher > span {
+        animation: none !important;
+    }
+}
+

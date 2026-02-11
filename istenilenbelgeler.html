@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÜ Spor Merkezi Kampanyası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #ec4899 100%);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: pulse 6s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 40px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: repeating-linear-gradient( 45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 20px );
+                animation: stripeMove 20s linear infinite;
+            }
+
+        @keyframes stripeMove {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        .header-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 12px;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+            background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #6366f1;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+        }
+
+            .section-title::before {
+                content: '';
+                width: 5px;
+                height: 35px;
+                background: linear-gradient(180deg, #6366f1, #ec4899);
+                border-radius: 10px;
+            }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .info-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            .info-card:hover::before {
+                transform: scaleX(1);
+            }
+
+            .info-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
+                border-color: #6366f1;
+            }
+
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 5px rgba(99, 102, 241, 0.3));
+        }
+
+        .info-card h3 {
+            color: #1e293b;
+            font-size: 1.15em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .family-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 25px;
+            padding: 35px;
+            border: 3px solid #fbbf24;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .family-section::before {
+                content: '✨';
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 3em;
+                opacity: 0.3;
+                animation: rotate 10s linear infinite;
+            }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .family-section h3 {
+            color: #92400e;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .family-icon {
+            font-size: 1.8em;
+        }
+
+        .family-section p {
+            color: #78350f;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .family-section strong {
+            color: #92400e;
+            font-weight: 700;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 30px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.25em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+            .footer::before {
+                content: '📱';
+                font-size: 1.5em;
+            }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 45px 25px;
+            }
+
+            .header-icon {
+                font-size: 3em;
+            }
+
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            .header h2 {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 35px 25px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 25px;
+            }
+
+            .header {
+                padding: 35px 20px;
+            }
+
+            .header-icon {
+                font-size: 2.5em;
+            }
+
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            .header h2 {
+                font-size: 0.9em;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .info-card, .family-section {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">💪</div>
+            <h1>Pamukkale Üniversitesi Spor Merkezi</h1>
+            <h2>Üyelik Yenileme İçin Gerekli Belgeler</h2>
+        </div>
+
+        <div class="content">
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Öğrenciler</h3>
+                    <p>Önlisans, Lisans ve Lisansüstü öğrencileri için E-Devlet'ten öğrenci belgesi yeterlidir.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">👔</div>
+                    <h3>PAÜ Personeli</h3>
+                    <p>Personel kartı fotokopisi yeterlidir.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🎖️</div>
+                    <h3>PAÜ Mezunu</h3>
+                    <p>E-Devlet'ten mezuniyet belgesi veya diploma fotokopisi yeterlidir.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🌟</div>
+                    <h3>PAÜ/Kamu Emeklisi</h3>
+                    <p>E-Devlet'ten emekli belgesi yeterlidir.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Kamu Personeli</h3>
+                    <p>Güncel görev yeri belgesi yeterlidir.</p>
+                </div>
+            </div>
+
+            <div class="family-section">
+                <h3>
+                    <span class="family-icon">👨‍👩‍👧‍👦</span>
+                    Aile Üyeleri İçin Önemli Not
+                </h3>
+                <p><strong>Tüm üyelik kategorileri için:</strong> Aile üyeleri için nüfus kayıt örneği (E-Devlet üzerinden) getirmeniz gerekmektedir.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Bilgi İçin 0258 296 28 58</p>
+        </div>
+    </div>
+</body>
+</html>
